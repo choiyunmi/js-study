@@ -1,0 +1,9 @@
+#wrap{
+  min-width: $screen-xsm;
+}
+
+.s-content-inner {
+  max-width: $screen-xlg;
+  margin:0 auto;
+  @include clearfix;
+}

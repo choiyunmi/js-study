@@ -1,0 +1,159 @@
+.#{$component-name} {
+    max-width: 1294px;
+    margin: 0 auto;
+    &__menu-list {
+        @include clearfix;
+        li {
+            float: $def-float;
+            width: 25%;
+            @include vw-font-size-pc(14);
+            font-weight: bold;
+            text-align: center;
+            a {
+                display: block;
+                @include vw-convert-pc(padding, 10);
+                background: $color7;
+                color: $color3;
+                &.is-selected,
+                &:hover, &:focus, &:active {
+                    background: $color5;
+                    color: $white;
+                }
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    &__menu-text {
+        @include vw-convert-pc(margin-top, 10);
+    }
+    &__panel-img {
+        background: $color7;
+    }
+    &__panel-item {
+        display: none;
+        position: relative;
+        &.is-selected {
+            display: block;
+        }
+    }
+    &__indicator {
+        &-item {
+            position: absolute;
+        }
+        &-number {
+            display: block;
+            @include vw-convert-pc(width, 20);
+            @include vw-convert-pc(height, 20);
+            border-radius: 100%;
+            background: $color3;
+            @include vw-font-size-pc(14);
+            font-weight: bold;
+            @include vw-convert-pc(line-height, 20);
+            color: $white;
+            text-align: center;
+        }
+        &-content {
+            position: absolute;
+            #{$opp-float}: 0;
+            @include vw-convert-pc(width, 250);
+            @if $def-direction == ltr {
+                @include vw-convert-pc(margin, 0 10 10 0);
+            } else {
+                @include vw-convert-pc(margin, 0 0 10 10);
+            }
+            @include vw-convert-pc(padding, 20);
+            bottom: 100%;
+            background: $white;
+            &.s-opt-float-tright {
+                right: auto;
+                @if $def-direction == ltr {
+                    @include vw-convert-pc(margin, 0 0 10 10);
+                } else {
+                    @include vw-convert-pc(margin, 0 10 10 0);
+                }
+            }
+            &.s-opt-float-bleft {
+                bottom: auto;
+                @if $def-direction == ltr {
+                    @include vw-convert-pc(margin, 10 10 0 0);
+                } else {
+                    @include vw-convert-pc(margin, 10 0 0 10);
+                }
+            }
+            &.s-opt-float-bright {
+                right: auto;
+                bottom: auto;
+                @if $def-direction == ltr {
+                    @include vw-convert-pc(margin, 10 0 0 10);
+                } else {
+                    @include vw-convert-pc(margin, 10 10 0 0);
+                }
+            }
+            .s-btn-prev, .s-btn-next {
+                @include vw-convert-pc(width, 19);
+                @include vw-convert-pc(height, 25);
+                @include vw-convert-pc(padding, 5);
+                background: $color3;
+                &:after {
+                    display: block;
+                    @include vw-convert-pc(width, 9);
+                    @include vw-convert-pc(height, 15);
+                    content: '';
+                }
+            }
+            .s-btn-prev {
+                &:after {
+                    background: url('../../imgs/svg-pd-btn-#{$def-float}.svg') no-repeat;
+                }
+            }
+            .s-btn-next {
+                &:after {
+                    background: url('../../imgs/svg-pd-btn-#{$opp-float}.svg') no-repeat;
+                }
+            }
+            strong {
+                @include vw-font-size-pc(24);
+            }
+            p {
+                @include vw-convert-pc(margin-top, 5);
+                @include vw-font-size-pc(16);
+            }
+        }
+        &-control {
+            @include vw-convert-pc(margin-bottom, 20);
+        }
+        &-counter {
+            @include vw-convert-pc(margin-bottom, 5);
+            @include vw-font-size-pc(14);
+        }
+        &-cta {
+            @include vw-convert-pc(margin-top, 20);
+            text-align : $opp-float;
+            a {
+                @include vw-font-size-pc(14);
+                color: $color11;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+        &-close {
+            position: absolute;
+            @include vw-convert-pc(top, 15);
+            @include vw-convert-pc(#{$opp-float}, 15);
+            .s-btn-close {
+                @include vw-convert-pc(width, 25);
+                @include vw-convert-pc(height, 25);
+                @include vw-convert-pc(padding, 5);
+                &:after {
+                    display: block;
+                    @include vw-convert-pc(width, 15);
+                    @include vw-convert-pc(height, 15);
+                    background: url('../../imgs/svg-close.svg') no-repeat;
+                    content: '';
+                }
+            }
+        }
+    }
+}

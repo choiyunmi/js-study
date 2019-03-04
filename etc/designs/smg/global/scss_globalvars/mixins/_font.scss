@@ -1,0 +1,129 @@
+// SamsungOne
+@mixin font-samsungone() {
+	font-family: $samsungOne;
+	html.rtl & {
+		font-family: $samsungOne-arabic;
+	}
+	html.rtl[lang^="he"] & {
+		font-family: $samsungOne-hebrew;
+	}
+	html[lang^="zh"] & {
+		font-family: $samsungOne-tcn;
+	}
+	html[lang="zh-CN"] & {
+		font-family: $samsungOne-scn;
+	}
+	html[lang^="th"] & {
+		font-family: $samsungOne-th;
+	}
+	html[lang^="my"] & {
+		font-family: $samsungOne-mm;
+	}
+}
+
+// SamsungSharpSans
+@mixin font-sharpsans() {
+	font-family: $sharpSans;
+	html.rtl & {
+		font-family: $sharpSans-arabic;
+	}
+	html.rtl[lang^="he"] & {
+		font-family: $sharpSans-hebrew;
+	}
+	html[lang^="el"] & {
+		font-family: $sharpSans-gr;
+	}
+	html[lang^="zh"] & {
+		font-family: $sharpSans-tcn;
+	}
+	html[lang="zh-CN"] & {
+		font-family: $sharpSans-scn;
+	}
+	html[lang^="th"] & {
+		font-family: $sharpSans-th;
+	}
+	html[lang^="vi"] & {
+		font-family: $sharpSans-vn;
+	}
+	html[lang^="my"] & {
+		font-family: $sharpSans-mm;
+	}
+}
+
+// Font-Size Convertor
+@mixin font-size($pixel) {
+	font-size: $pixel*1px;
+	html[lang^="th"] & {
+		font-size: $pixel*$th-fontsize-ratio*1px;
+	}
+}
+@mixin vw-font-size-pc($pc-pixel) {
+	font-size: $pc-pixel*1px;
+	font-size: $pc-pixel*100/1440*1vw;
+	html[lang^="th"] & {
+		font-size: if($pc-pixel > $th-large-font, $pc-pixel*$th-large-fontsize-ratio*1px, $pc-pixel*$th-fontsize-ratio*1px);
+		font-size: if($pc-pixel > $th-large-font, $pc-pixel*$th-large-fontsize-ratio*100/1440*1vw, $pc-pixel*$th-fontsize-ratio*100/1440*1vw);
+	}
+	@media (min-width:$screen-xlg) {
+		font-size: $pc-pixel*1px;
+		html[lang^="th"] & {
+			font-size: if($pc-pixel > $th-large-font, $pc-pixel*$th-large-fontsize-ratio*1px, $pc-pixel*$th-fontsize-ratio*1px);
+		}
+	}
+}
+@mixin vw-font-size-tb($tb-pixel) {
+	font-size: $tb-pixel*1px;
+	font-size: $tb-pixel*100/1024*1vw;
+	html[lang^="th"] & {
+		font-size: if($tb-pixel > $th-large-font, $tb-pixel*$th-large-fontsize-ratio*1px, $tb-pixel*$th-fontsize-ratio*1px);
+		font-size: if($tb-pixel > $th-large-font, $tb-pixel*$th-large-fontsize-ratio*100/1024*1vw, $tb-pixel*$th-fontsize-ratio*100/1024*1vw);
+	}
+}
+@mixin vw-font-size-mo($mo-pixel) {
+	font-size: $mo-pixel/360*768*1px;
+	font-size: $mo-pixel*100/360*1vw;
+	html[lang^="th"] & {
+		font-size: if($mo-pixel > $th-large-font/2, $mo-pixel*$th-large-fontsize-ratio/360*768*1px, $mo-pixel*$th-fontsize-ratio/360*768*1px);
+		font-size: if($mo-pixel > $th-large-font/2, $mo-pixel*$th-large-fontsize-ratio*100/360*1vw, $mo-pixel*$th-fontsize-ratio*100/360*1vw);
+	}
+	@media (max-width:360px) {
+		font-size: $mo-pixel*1px;
+		font-size: $mo-pixel*100/360*1vw;
+		html[lang^="th"] & {
+			font-size: if($mo-pixel > $th-large-font/2, $mo-pixel*$th-large-fontsize-ratio*1px, $mo-pixel*$th-fontsize-ratio*1px);
+			font-size: if($mo-pixel > $th-large-font/2, $mo-pixel*$th-large-fontsize-ratio*100/360*1vw, $mo-pixel*$th-fontsize-ratio*100/360*1vw);
+		}
+	}
+}
+
+// line-height Convertor 
+@mixin line-height-pc($num,$font-size: 0) {
+	line-height: $num;
+	html[lang^="th"] & {
+		line-height: if( $font-size > $th-large-font, $num*$th-large-lineheight-ratio, $num*$th-lineheight-ratio);
+	}
+	html[lang^="my"] & {
+		//line-height: $num*$mm-lineheight-ratio;
+		line-height: if($num < 1.4, 1.4, 1.6);
+	}
+}
+@mixin line-height-tb($num,$font-size: 0) {
+	line-height: $num;
+	html[lang^="th"] & {
+		line-height: if( $font-size > $th-large-font, $num*$th-large-lineheight-ratio, $num*$th-lineheight-ratio);
+	}
+	html[lang^="my"] & {
+		//line-height: $num*$mm-lineheight-ratio;
+		line-height: if($num < 1.4, 1.4, 1.6);
+	}
+}
+@mixin line-height-mo($num,$font-size: 0) {
+	line-height: $num;
+	html[lang^="th"] & {
+		line-height: if( $font-size > $th-large-font/2, $num*$th-large-lineheight-ratio, $num*$th-lineheight-ratio);
+	}
+	html[lang^="my"] & {
+		//line-height: $num*$mm-lineheight-ratio;
+		line-height: if($num < 1.4, 1.4, 1.6);
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "paths": [
+    "apps/samsung/components/global/content/exam1/clientlibs/",
+    "etc/designs/smg/global/templates/clientlibs/",
+    "etc/designs/smg/global/templates/clientlibs-rtl/",
+    "etc/designs/smg/samsung-eu/templates/clientlibs/",
+    "etc/designs/smg/samsung-eu/templates/clientlibs-rtl/"
+  ]
+}

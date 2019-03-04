@@ -1,0 +1,27 @@
+.s-bg-white-to-lightgrey {
+  @include white-to-lightgrey-bg();
+}
+
+.s-bg-white {
+  background: $white;
+}
+
+.s-bg-black {
+  background: $black;
+}
+
+.s-bg-color3 {
+  background: $color3;
+}
+
+.s-bg-color4 {
+  background: $color4;
+}
+
+.s-bg-color6 {
+  background: $color6;
+}
+
+.s-bg-color7 {
+  background: $color7;
+}

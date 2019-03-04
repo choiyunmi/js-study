@@ -1,0 +1,65 @@
+@include breakpoint(mobile) {
+    .#{$component-name} {
+        &__menu-list {
+            li {
+                @include vw-font-size-mo(14);
+                a {
+                    @include vw-convert-mo(padding, 10);
+                }
+            }
+        }
+        &__menu-text {
+            @include vw-convert-mo(margin-top, 10);
+        }
+        &__indicator {
+            &-item {
+                position: static;
+            }
+            &-number {
+                position: absolute;
+                @include vw-convert-mo(width, 20);
+                @include vw-convert-mo(height, 20);
+                @include vw-font-size-mo(14);
+                @include vw-convert-mo(line-height, 20);
+            }
+            &-content {
+                position: static;
+                width: auto;
+                @include vw-convert-mo(padding, 20);
+                margin: 0 !important;
+                .s-btn-prev, .s-btn-next {
+                    @include vw-convert-mo(width, 19);
+                    @include vw-convert-mo(height, 25);
+                    @include vw-convert-mo(padding, 5);
+                    &:after {
+                        @include vw-convert-mo(width, 9);
+                        @include vw-convert-mo(height, 15);
+                    }
+                }
+                strong {
+                    @include vw-font-size-mo(24);
+                }
+                p {
+                    @include vw-convert-mo(margin-top, 5);
+                    @include vw-font-size-mo(16);
+                }
+            }
+            &-control {
+                @include vw-convert-mo(margin-bottom, 20);
+            }
+            &-counter {
+                @include vw-convert-mo(margin-bottom, 5);
+                @include vw-font-size-mo(14);
+            }
+            &-cta {
+                @include vw-convert-mo(margin-top, 20);
+                a {
+                    @include vw-font-size-mo(14);
+                }
+            }
+            &-close {
+                display: none;
+            }
+        }
+    }
+}

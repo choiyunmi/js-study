@@ -1,0 +1,50 @@
+{
+  "componentConfig":{
+    "common": {
+      "relativePath": "common/",
+      "componentGroup": "Samsung Components",
+      "categories": "[samsung.homepage-components]"
+    },
+    "homepage": {
+      "relativePath": "homepage/",
+      "componentGroup": "Homepage Components",
+      "categories": "[samsung.homepage-components]"
+    },
+    "shop": {
+      "relativePath": "shop/",
+      "componentGroup": "Shop Components",
+      "categories": "[samsung.shop-components]"
+    },
+    "product": {
+      "relativePath": "product/",
+      "componentGroup": "Product Components",
+      "categories": "[samsung.shop-components]"
+    },
+    "search": {
+      "relativePath": "search/",
+      "componentGroup": "Search Components",
+      "categories": "[samsung.shop-components]"
+    },
+    "search": {
+      "relativePath": "about-us/",
+      "componentGroup": "About Us",
+      "categories": "[samsung.about-us-default]"
+    },
+    "news": {
+      "relativePath": "news/",
+      "componentGroup": "News Components",
+      "categories": "[samsung.news-components]"
+    },
+    "support-new": {
+      "relativePath": "support-new/",
+      "componentGroup": "Support New Components",
+      "categories": "[samsung.support-new-components]"
+    }
+  },
+  "scanPaths":[
+    "apps",
+    "etc/designs"
+  ],
+  "componentLibParentPath": "apps/samsungp5/components/global/content/",
+  "boilerplatePath": "apps/samsung/components/boilerplate/components/boilerplate-component/"
+}

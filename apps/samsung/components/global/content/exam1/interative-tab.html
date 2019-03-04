@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive Tab (EXAMPLE)</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc/designs/smg/global/templates/clientlibs/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<!--[if lt IE 9]>
+    <script src="/etc/designs/smg/global/ie9/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="wrap">
+    <!--/* header */-->
+    
+    <!--/* content */-->
+    <div id="content" role="main">
+        <div class="interactive-tab">
+            <div class="interactive-tab__menu">
+                <ul class="interactive-tab__menu-list" role="tablist">
+                <li role="presentation">
+                    <!--/* [D] selected : add .is-selected, and change aria-selected to 'true' */-->
+                    <a href="#" class="interactive-tab__menu-item is-selected" role="tab" aria-controls="tpanel_01" aria-selected="true">
+                        <picture>
+                            <img src="imgs/@img1.png" alt="">
+                        </picture>
+                        <div class="interactive-tab__menu-text">
+                            <span>Clothes shop</span>
+                        </div>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#" class="interactive-tab__menu-item" role="tab" aria-controls="tpanel_02" aria-selected="false">
+                        <picture>
+                            <img src="imgs/@img2.png" alt="">
+                        </picture>
+                        <div class="interactive-tab__menu-text">
+                            <span>Appliance shop</span>
+                        </div>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#" class="interactive-tab__menu-item" role="tab" aria-controls="tpanel_03" aria-selected="false">
+                        <picture>
+                            <img src="imgs/@img3.png" alt="">
+                        </picture>
+                        <div class="interactive-tab__menu-text">
+                            <span>Store</span>
+                        </div>
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <div class="interactive-tab__panel">
+                <!--/* [D] description layer options :
+                            - fixed : add .s-opt-fixed
+                            - float : add .s-opt-float
+                  */-->
+                  <!--/* [D] selected : add .is-selected  */-->
+                <div class="interactive-tab__panel-item s-opt-fixed is-selected" role="tabpanel" id="tpanel_01">
+                    <div class="interactive-tab__indicator">
+                        <div class="interactive-tab__panel-img" style="width:1294px">
+                            <img src="imgs/@img1.png" alt="">
+                        </div>
+                        <!--/* [D] active : add .is-active */-->
+                        <!--/* [D] 등록하는 이미지 너비의 left, top 기준으로 위치값 입력 필요 (뿌려지는 수치는 %로 환산)  */-->
+                        <div class="interactive-tab__indicator-item is-active" data-location='{
+                            "top" : "300px",
+                            "left" : "300px"
+                        }' style="top:300px;left:300px">
+                            
+                            <!--/* [D] button 위치에 따라 'interactive-tab__indicator-content' 요소 노출위치 변경 (FRD 참조)  */-->
+                            <a href="#layer1" class="interactive-tab__indicator-number" style="top:300px;left:300px">1</a>
+                            <!--/* [D] options :
+                                - top, left : default
+                                - top, right : add .s-opt-float-tright
+                                - bottom, left : add .s-opt-float-bleft
+                                - bottom, right : add .s-opt-float-bright
+                            */-->
+                            <div class="interactive-tab__indicator-content s-opt-float-bright" id="layer1">
+                                <div class="interactive-tab__indicator-control">
+                                    <button type="button" class="s-btn-prev"><span class="blind">Prev</span></button>
+                                    <button type="button" class="s-btn-next"><span class="blind">Next</span></button>
+                                </div>
+                                <p class="interactive-tab__indicator-counter">1 - 6</p>
+                                <strong>This is the title</strong>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, alias incidunt aspernatur a minima libero eum cupiditate soluta dignissimos.</p>
+                                <div class="interactive-tab__indicator-cta">
+                                    <a href="#">Learn more</a>
+                                </div>
+                                <div class="interactive-tab__indicator-close">
+                                    <button type="button" class="s-btn-close"><span class="blind">Close</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="interactive-tab__panel-item s-opt-float" role="tabpanel" id="tpanel_02">
+                    <div class="interactive-tab__indicator">
+                        <div class="interactive-tab__panel-img">
+                            <img src="imgs/@img2.png" alt="">
+                        </div>
+                        <!--/* [D] active : add .is-active */-->
+                        <!--/* [D] 등록하는 이미지 너비의 left, top 기준으로 위치값 입력 필요 (뿌려지는 수치는 %로 환산)  */-->
+                        <div class="interactive-tab__indicator-item" data-location='{
+                            "top" : "300px",
+                            "left" : "300px"
+                        }' style="top:20%;left:70%">
+                            <!--/* [D] button 위치에 따라 'interactive-tab__indicator-content' 요소 노출위치 변경 (FRD 참조)  */-->
+                            <a href="#layer3" class="interactive-tab__indicator-number">1</a>
+                            <!--/* [D] options :
+                                - top, left : default
+                                - top, right : add .s-opt-float-tright
+                                - bottom, left : add .s-opt-float-bleft
+                                - bottom, right : add .s-opt-float-bright
+                            */-->
+                            <div class="interactive-tab__indicator-content s-opt-float-tright" id="layer3">
+                                <div class="interactive-tab__indicator-control">
+                                    <button type="button" class="s-btn-prev"><span class="blind">Prev</span></button>
+                                    <button type="button" class="s-btn-next"><span class="blind">Next</span></button>
+                                </div>
+                                <p class="interactive-tab__indicator-counter">1 - 6</p>
+                                <strong>This is the title</strong>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, alias incidunt aspernatur a minima libero eum cupiditate soluta dignissimos.</p>
+                                <div class="interactive-tab__indicator-cta">
+                                    <a href="#">Learn more</a>
+                                </div>
+                                <div class="interactive-tab__indicator-close">
+                                    <button type="button" class="s-btn-close"><span class="blind">Close</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interactive-tab__indicator-item" data-location='{
+                            "top" : "100px",
+                            "left" : "500px"
+                        }' style="top:80%;left:30%">
+                            <a href="#layer4" class="interactive-tab__indicator-number">2</a>
+                            <div class="interactive-tab__indicator-content s-opt-float-bleft" id="layer4">
+                                <div class="interactive-tab__indicator-control">
+                                    <button type="button" class="s-btn-prev"><span class="blind">Prev</span></button>
+                                    <button type="button" class="s-btn-next"><span class="blind">Next</span></button>
+                                </div>
+                                <p class="interactive-tab__indicator-counter">1 - 6</p>
+                                <strong>This is the title</strong>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, alias incidunt aspernatur a minima libero eum cupiditate soluta dignissimos.</p>
+                                <div class="interactive-tab__indicator-cta">
+                                    <a href="#">Learn more</a>
+                                </div>
+                                <div class="interactive-tab__indicator-close">
+                                    <button type="button" class="s-btn-close"><span class="blind">Close</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interactive-tab__indicator-item" data-location='{
+                            "top" : "250px",
+                            "left" : "250px"
+                        }' style="top:20%;left:30%">
+                            <a href="#layer14" class="interactive-tab__indicator-number">3</a>
+                            <div class="interactive-tab__indicator-content s-opt-float-bleft" id="layer14">
+                                <div class="interactive-tab__indicator-control">
+                                    <button type="button" class="s-btn-prev"><span class="blind">Prev</span></button>
+                                    <button type="button" class="s-btn-next"><span class="blind">Next</span></button>
+                                </div>
+                                <p class="interactive-tab__indicator-counter">1 - 6</p>
+                                <strong>This is the title</strong>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, alias incidunt aspernatur a minima libero eum cupiditate soluta dignissimos.</p>
+                                <div class="interactive-tab__indicator-cta">
+                                    <a href="#">Learn more</a>
+                                </div>
+                                <div class="interactive-tab__indicator-close">
+                                    <button type="button" class="s-btn-close"><span class="blind">Close</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="interactive-tab__panel-item s-opt-float" role="tabpanel" id="tpanel_03">
+                    <div class="interactive-tab__indicator">
+                        <div class="interactive-tab__panel-img">
+                            <img src="imgs/@img3.png" alt="">
+                        </div>
+                        <!--/* [D] active : add .is-active */-->
+                        <!--/* [D] 등록하는 이미지 너비의 left, top 기준으로 위치값 입력 필요 (뿌려지는 수치는 %로 환산)  */-->
+                        <div class="interactive-tab__indicator-item" data-location='{
+                            "top" : "300px",
+                            "left" : "200px"
+                        }' style="top:10%;left:30%">
+                            <!--/* [D] button 위치에 따라 'interactive-tab__indicator-content' 요소 노출위치 변경 (FRD 참조)  */-->
+                            <a href="#layer5" class="interactive-tab__indicator-number">1</a>
+                            <!--/* [D] options :
+                                - top, left : default
+                                - top, right : add .s-opt-float-tright
+                                - bottom, left : add .s-opt-float-bleft
+                                - bottom, right : add .s-opt-float-bright
+                            */-->
+                            <div class="interactive-tab__indicator-content" id="layer5">
+                                <div class="interactive-tab__indicator-control">
+                                    <button type="button" class="s-btn-prev"><span class="blind">Prev</span></button>
+                                    <button type="button" class="s-btn-next"><span class="blind">Next</span></button>
+                                </div>
+                                <p class="interactive-tab__indicator-counter">1 - 6</p>
+                                <strong>This is the title</strong>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, alias incidunt aspernatur a minima libero eum cupiditate soluta dignissimos.</p>
+                                <div class="interactive-tab__indicator-cta">
+                                    <a href="#">Learn more</a>
+                                </div>
+                                <div class="interactive-tab__indicator-close">
+                                    <button type="button" class="s-btn-close"><span class="blind">Close</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interactive-tab__indicator-item" data-location='{
+                            "top" : "600px",
+                            "left" : "400px"
+                        }' style="top:90%;left:70%">
+                            <a href="#layer6" class="interactive-tab__indicator-number">2</a>
+                            <div class="interactive-tab__indicator-content s-opt-float-bright" id="layer6">
+                                <div class="interactive-tab__indicator-control">
+                                    <button type="button" class="s-btn-prev"><span class="blind">Prev</span></button>
+                                    <button type="button" class="s-btn-next"><span class="blind">Next</span></button>
+                                </div>
+                                <p class="interactive-tab__indicator-counter">1 - 6</p>
+                                <strong>This is the title</strong>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, alias incidunt aspernatur a minima libero eum cupiditate soluta dignissimos.</p>
+                                <div class="interactive-tab__indicator-cta">
+                                    <a href="#">Learn more</a>
+                                </div>
+                                <div class="interactive-tab__indicator-close">
+                                    <button type="button" class="s-btn-close"><span class="blind">Close</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/* footer */-->
+</div>
+<!--/* common js */-->
+<script src="/etc/designs/smg/global/templates/clientlibs/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+</body>
+</html>

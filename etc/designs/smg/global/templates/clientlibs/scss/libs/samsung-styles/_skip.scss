@@ -1,0 +1,21 @@
+// skip navigation
+.s-skip-content {
+	a {
+		overflow: hidden;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1px;
+		height: 1px;
+		background: $color1;
+		color: $color2;
+		text-align: center;
+		&:focus {
+			position: relative;
+			width: 100%;
+			height: auto;
+			padding: 10px;
+		}
+	}
+}

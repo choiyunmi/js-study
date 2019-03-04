@@ -1,0 +1,138 @@
+/* video */
+.s-video-area {
+	display: none;
+	overflow: hidden;
+	@include absolute-full;
+	width: 100%;
+	z-index: 100;
+	&:before {
+		@include absolute-full;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.8);
+		content: '';
+	}
+	iframe,object {
+		@include absolute-full;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+	.s-video-wrap,.s-video-container {
+		@include absolute-full;
+	}
+	.s-video-container {
+		z-index: 10;
+		& > div {
+			@include absolute-full;
+			height: 100%;
+		}
+	}
+}
+.s-media-close {
+	overflow: hidden;
+	position: absolute;
+	top: 30px;
+	#{$opp-float}: 30px;
+	z-index: 100;
+	width: 28px;
+	height: 28px;
+	background: url(#{$path-common-img}/btn-close-white.png) no-repeat 50% 50%;
+	font-size: 0;
+	line-height: 99px;
+	cursor: pointer;
+}
+
+.s-media-close.s-black {
+	background: url(#{$path-common-img}/btn-close-black.png) no-repeat 50% 50%;
+}
+
+.video-open #wrap{
+	overflow-x: hidden;
+}
+
+.mp4-video {
+	position: relative;
+}
+
+.s-mp4-video-play {
+	overflow: hidden;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	@include vw-convert-pc(width, 142);
+	@include vw-convert-pc(height, 142);
+	margin: auto;
+	text-indent: -999px;
+	background: url(#{$path-common-img}/btn-play-big.png) no-repeat;
+	background-size: 100%;
+	&:-moz-focusring {
+		outline: 1px dotted ButtonText;
+	}
+}
+
+
+.bc-cplayer-container {
+	.bc-cplayer-control {
+		background-image:url(#{$path-common-img}/brightcove-bg-panel.gif);
+		.rewind {
+			background-image: url(#{$path-common-img}/brightcove-btn-rewind.gif);
+		}
+		.play {
+			background-image: url(#{$path-common-img}/brightcove-btn-play.gif);
+		}
+		.pause {
+			background-image: url(#{$path-common-img}/brightcove-btn-pause.gif);
+		}
+		.forward {
+			background-image: url(#{$path-common-img}/brightcove-btn-forward.gif);
+		}
+		.mute {
+			background-image: url(#{$path-common-img}/brightcove-btn-volon.gif);
+		}
+		.volume-down {
+			background-image: url(#{$path-common-img}/brightcove-btn-voldown.gif);
+		}
+		.volume-up {
+			background-image: url(#{$path-common-img}/brightcove-btn-volup.gif);
+		}
+		.muted {
+			background-image: url(#{$path-common-img}/brightcove-btn-volmute.gif);
+		}
+		.rightPanel button.bc-cc {
+			background-image:url(#{$path-common-img}/brightcove-btn-bc-cc.png);
+		}
+		.rightPanel button.bc-cc.over {
+			background-image:url(#{$path-common-img}/brightcove-btn-bc-cc-over.png) !important;
+		}
+		.rightPanel button.bc-cc.on {
+			background-image:url(#{$path-common-img}/brightcove-btn-bc-cc-on.png) !important;
+		}
+	}
+}
+.bc-cplayer-control-area {
+	height: 100%;
+}
+
+@include breakpoint(mobile) {
+	.s-media-close {
+		@include vw-convert-mo(top, 16);
+		@include vw-convert-mo(#{$opp-float}, 16);
+		width: 25px;
+		height: 25px;
+		background: url(#{$path-common-img}/btn-close-white_x2.png) no-repeat 50% 50%;
+		background-size:100%;
+	}
+
+	.s-media-close.s-black {
+		background: url(#{$path-common-img}/btn-close-black_x2.png) no-repeat 50% 50%;
+		background-size:100%;
+	}
+	.s-mp4-video-play {
+		@include vw-convert-mo(width, 84);
+		@include vw-convert-mo(height, 84);
+	}
+}

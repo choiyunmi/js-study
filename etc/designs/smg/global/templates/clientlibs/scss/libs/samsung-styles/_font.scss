@@ -1,0 +1,31 @@
+/* One Font */
+@font-face {
+  font-family: 'SamsungOne';
+  src: url(#{$path-font}/SamsungOne-400.eot);
+  src: url(#{$path-font}/SamsungOne-400.eot?#iefix) format('embedded-opentype'),
+       url(#{$path-font}/SamsungOne-400.woff2) format('woff2'),
+       url(#{$path-font}/SamsungOne-400.woff) format('woff'),
+       url(#{$path-font}/SamsungOne-400.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SamsungOne';
+  src: url(#{$path-font}/SamsungOne-700.eot);
+  src: url(#{$path-font}/SamsungOne-700.eot?#iefix) format('embedded-opentype'),
+       url(#{$path-font}/SamsungOne-700.woff2) format('woff2'),
+       url(#{$path-font}/SamsungOne-700.woff) format('woff'),
+       url(#{$path-font}/SamsungOne-700.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Samsung Sharp Sans */
+@font-face {
+    font-family: 'SamsungSharpSans';
+    src:url(#{$path-font}/SamsungSharpSansBd.eot);
+    src:url(#{$path-font}/SamsungSharpSansBd.eot?#iefix) format('embedded-opentype'),
+        url(#{$path-font}/SamsungSharpSansBd.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+}

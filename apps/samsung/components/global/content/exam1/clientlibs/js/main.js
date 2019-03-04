@@ -1,0 +1,5 @@
+(function (win, $, doc) {
+    'use strict';
+})(window, window.jQuery, window.document);
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4wMC5jb21tb245OS5jb21wb25lbnQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIihmdW5jdGlvbiAod2luLCAkLCBkb2MpIHtcclxuICAgICd1c2Ugc3RyaWN0JztcclxufSkod2luZG93LCB3aW5kb3cualF1ZXJ5LCB3aW5kb3cuZG9jdW1lbnQpO1xyXG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=

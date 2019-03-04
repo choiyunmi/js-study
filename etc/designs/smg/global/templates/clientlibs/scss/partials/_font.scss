@@ -1,0 +1,6 @@
+// font
+.s-font-sharpsans {
+	&, & * {
+		@include font-sharpsans();
+	}
+}

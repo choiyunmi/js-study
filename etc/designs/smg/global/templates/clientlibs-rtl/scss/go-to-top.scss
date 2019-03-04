@@ -1,0 +1,51 @@
+@import '../../../scss_globalvars/globalvars-rtl';
+
+.s-gotop-wrap {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	#{$opp-float}: 32px;
+	bottom: 20px;
+	z-index: 1000;
+	max-width: 1440px;
+	text-align: $opp-float;
+	&.s-show {
+		display: block;
+	}
+	.s-btn-gotop {
+		width: 58px;
+		height: 58px;
+		border-radius: 4px;
+		background: $color3;
+		font-size: 0;
+		opacity: .7;
+		&:after {
+			overflow: hidden;
+			display: inline-block;
+			width: 36px;
+			height: 22px;
+			margin: 18px auto;
+			background: url('#{$path-common-img}/btn-gotop.png') no-repeat;
+			background-size: 100%;
+			content: '';
+		}
+	}
+}
+
+@include breakpoint(mobile) {
+	.s-gotop-wrap {
+		min-width: 320px;
+		@include vw-convert-mo(#{$opp-float}, 16);
+		@include vw-convert-mo(bottom, 16);
+		font-size: 0;
+		.s-btn-gotop {
+			width: 40px;
+			height: 40px;
+			&:after {
+				width: 23px;
+				height: 16px;
+				margin: 9px auto;
+			}
+		}
+	}
+}
