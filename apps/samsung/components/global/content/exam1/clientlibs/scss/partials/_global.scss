@@ -143,6 +143,7 @@
             @include vw-convert-pc(top, 15);
             @include vw-convert-pc(#{$opp-float}, 15);
             .s-btn-close {
+                display: block;
                 @include vw-convert-pc(width, 25);
                 @include vw-convert-pc(height, 25);
                 @include vw-convert-pc(padding, 5);
