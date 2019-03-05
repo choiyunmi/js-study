@@ -1,3 +1,2 @@
-* FRD 내용 확인 (구체적이지 않을 경우, 이해한대로 구현)
-* 모든 구현은 삼성 프로젝트 기준으로 구현 (컨벤션, 접근성, 크로스브라우징, 확장성, AEM 개발 고려 등)
-* 1차 구현 : 3/12 까지
+### 과제물 경로
+* 1회차 : https://github.com/realyuki/js-study/tree/master/apps/samsung/components/global/content/exam1
