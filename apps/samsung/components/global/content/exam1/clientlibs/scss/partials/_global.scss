@@ -1,6 +1,9 @@
 .#{$component-name} {
-    max-width: 1294px;
+    max-width: 1440px;
     margin: 0 auto;
+    img {
+        max-width: 100%;
+    }
     &__menu-list {
         @include clearfix;
         li {
@@ -19,9 +22,6 @@
                     background: $color5;
                     color: $white;
                 }
-            }
-            img {
-                max-width: 100%;
             }
         }
     }
